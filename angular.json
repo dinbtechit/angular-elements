@@ -108,6 +108,37 @@
           }
         }
       }
+    },
+    "click-tracker": {
+      "projectType": "library",
+      "root": "projects/click-tracker",
+      "sourceRoot": "projects/click-tracker/src",
+      "prefix": "ct",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/click-tracker/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/click-tracker/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/click-tracker/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/click-tracker/src/test.ts",
+            "tsConfig": "projects/click-tracker/tsconfig.spec.json",
+            "karmaConfig": "projects/click-tracker/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-elements"
