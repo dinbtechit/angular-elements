@@ -9,7 +9,22 @@ npm run build-package-elements
 cd vanilla-js
 # open index.html in chrome browser 
 ```
+in `index.html` now we could use angualar tags `ct-click-tracker` in an external file
+```html
+<!--include the dist js-->
+<script src="../dist/ct-element.js"></script>
 
+<ct-click-tracker step="5"></ct-click-tracker>
+
+<script>
+  const ctElm = document.querySelector('ct-click-tracker');
+  ctElm.addEventListener('increase', (event) => {
+    console.log(event.detail);
+  });
+</script>
+```
+
+----
 
 ## Development server
 
