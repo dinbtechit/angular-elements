@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-elements": "ng build click-tracker-element",
+    "package-elements": "cat dist/click-tracker-element/runtime*.js dist/click-tracker-element/polyfills*.js dist/click-tracker-element/main*.js > dist/ct-element.js",
+    "build-package-elements": "npm run build-elements && npm run package-elements"
   },
   "private": true,
   "dependencies": {

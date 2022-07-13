@@ -118,7 +118,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/click-tracker/ng-package.json"
+            "project": "projects/click-tracker/ng-package.json",
+            "aot": true,
+            "sourceMap": true,
+            "extractLicenses": true,
+            "buildOptimizer": true,
+            "vendorChunk": false,
+            "namedChunks": false
           },
           "configurations": {
             "production": {
